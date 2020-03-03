@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+  
+    <title>(0|1) log</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/_pygments.css" type="text/css">
+  
+  </head>
+  <body>
+    <div class=container>
+      <div class=header>
+        <a href="/about/">(0|1) log</a>
+      </div>
+      <div class=navigation>
+        <ul>
+          <li><a href="/">blog</a>
+          <li><a href="/archive/">archive</a>
+          <li><a href="/tags/">tags</a>
+          <li><a href="/projects/">projects</a>
+          <li><a href="/about/">about</a>
+        </ul>
+      </div>
+      <div class=body>
+        
+  <h1 class="title">gitsuggest</h1>
+
+  
+  <p class=date>written on Saturday, June 3, 2017
+  
+
+  <p>Average time spent by a software professional reading vs writing code is
+around 10:1. This imbalance is certainly justified as one quick way to
+level up as a programmer is by reading code written by other good
+programmers.</p>
+<p>Github definitely is a great source if you want to expand your horizons
+and read about new technology and contribute to it. Unlike
+Quora/Facebook, Github doesn’t really have suggested repositories or
+repositories similar to the ones you are currently viewing section, so I
+built one!</p>
+<p>This tool analyses the repositories you are interested in and the
+repositories people you follow are interested in (because obviously, you
+think they are good) and generates a ranked list of repositories for you
+to browse through which you might be interested in!</p>
+<p>Here is a gif of it in action.</p>
+<img alt="Demo" class="align-center" src="https://i.imgur.com/3AfvTxt.gif" style="width: 1000px; height: 1000px;" />
+<p>The way it works is this. Say you are interested in certain areas, the
+way you express this interest when it comes to github is you star a
+repository. If you think a person contributes to a lot of areas you are
+interested in, you follow that person.</p>
+<p>So, repositories starred by you and the repositories starred by the
+people you follow in unison give good information about what kind of
+repositories you like. In this tool we use text-mining and LDA to
+generate queries which will provide repositories you might be interested
+in.</p>
+<div class="section" id="where-to-find-the-code">
+<h2>Where to find the code ?</h2>
+<p><a class="reference external" href="https://github.com/csurfer/gitsuggest">https://github.com/csurfer/gitsuggest</a></p>
+</div>
+
+
+  
+  <p class=tags>This entry was tagged
+    
+      <a href="/tags/ML/">ML</a>, 
+      <a href="/tags/flask/">flask</a>, 
+      <a href="/tags/github/">github</a> and 
+      <a href="/tags/python/">python</a>
+  
+
+  
+
+      </div>
+    </div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20909083-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-20909083-1', {
+        'anonymize_ip': true,
+        'cookie_expires': 0,
+      });
+    </script>
+  </body>
+</html>

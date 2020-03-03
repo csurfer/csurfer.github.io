@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+  
+    <title>(0|1) log</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/_pygments.css" type="text/css">
+  
+  </head>
+  <body>
+    <div class=container>
+      <div class=header>
+        <a href="/about/">(0|1) log</a>
+      </div>
+      <div class=navigation>
+        <ul>
+          <li><a href="/">blog</a>
+          <li><a href="/archive/">archive</a>
+          <li><a href="/tags/">tags</a>
+          <li><a href="/projects/">projects</a>
+          <li><a href="/about/">about</a>
+        </ul>
+      </div>
+      <div class=body>
+        
+  <h1 class="title">pypette</h1>
+
+  
+  <p class=date>written on Thursday, November 9, 2017
+  
+
+  <p>I often find myself in the need of executing a certain number of jobs in
+a specific order(for data processing or for test pipelines or for
+qualify pipelines etc). The ordering of the jobs can be like:</p>
+<ul class="simple">
+<li>one after another so that a job is run only if its predecessor
+succeeds.</li>
+<li>couple of jobs in parallel as they are mutually exclusive</li>
+<li>some bash commands in between</li>
+</ul>
+<p>etc. These can be achieved using threads/subprocesses in python. But in
+my view, everything in python should be as simple as</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">antigravity</span>
+</pre></div>
+<p>so I cooked up pypette (to be read as pipette) a python library which
+exposes a ridiculously simple interface to build complicated pipelines
+to the user, abstracting away all the responsibilities of thread
+creation and management. Still in alpha mode but might be helpful for
+your next pipeline.</p>
+
+
+  
+  <p class=tags>This entry was tagged
+    
+      <a href="/tags/pipelines/">pipelines</a>, 
+      <a href="/tags/productivity/">productivity</a> and 
+      <a href="/tags/python/">python</a>
+  
+
+  
+
+      </div>
+    </div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20909083-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-20909083-1', {
+        'anonymize_ip': true,
+        'cookie_expires': 0,
+      });
+    </script>
+  </body>
+</html>

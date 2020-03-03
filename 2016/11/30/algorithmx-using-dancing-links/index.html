@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+  
+    <title>(0|1) log</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/_pygments.css" type="text/css">
+  
+  </head>
+  <body>
+    <div class=container>
+      <div class=header>
+        <a href="/about/">(0|1) log</a>
+      </div>
+      <div class=navigation>
+        <ul>
+          <li><a href="/">blog</a>
+          <li><a href="/archive/">archive</a>
+          <li><a href="/tags/">tags</a>
+          <li><a href="/projects/">projects</a>
+          <li><a href="/about/">about</a>
+        </ul>
+      </div>
+      <div class=body>
+        
+  <h1 class="title">Dancing links</h1>
+
+  
+  <p class=date>written on Wednesday, November 30, 2016
+  
+
+  <p>Solving a Sudoku puzzle of every size and form has always given me a
+sense of happiness. I first wrote a Sudoku solver using naive
+backtracking (checking every possibility) with my two other friends
+<a class="reference external" href="https://www.facebook.com/shreesha.k">Shreesha</a> and <a class="reference external" href="https://www.facebook.com/HarshaAgrahara">Harsha</a> back in 2007 as part of a summer project,
+which involved developing a C program to solve a sudoku puzzle and
+create a nice interface for it using <tt class="docutils literal">graphics.h</tt> in <tt class="docutils literal">TurboC</tt>.</p>
+<p>Fast forward a few years I came across a paper by Prof. Donald Knuth
+called the <a class="reference external" href="https://www.ocf.berkeley.edu/~jchu/publicportal/sudoku/0011047.pdf">Dancing Links</a>. This paper not only provides an algorithm
+to efficiently solve exact cover problems but also presents a neat
+little data structure to speed it up.</p>
+<p>I have been meaning to try out Dancing Links to solve the Sudoku for
+some time but never got around to it. So, when I was playing around with
+Scala and wanted to write something up using it, I decided to go ahead
+and implement it.</p>
+<div class="section" id="what-is-implemented">
+<h2>What is implemented ?</h2>
+<ul class="simple">
+<li>DLX data structure.</li>
+<li>Methods DLX data structure needs to support to facilitate AlgorithmX.</li>
+<li>Class to solve exact cover problems using DLX and AlgorithmX.</li>
+<li>Class to solve 9x9 sudoku problems using DLX and AlgorithmX.</li>
+</ul>
+</div>
+<div class="section" id="where-to-find-the-code">
+<h2>Where to find the code ?</h2>
+<p><a class="reference external" href="https://github.com/csurfer/scala-dlx">https://github.com/csurfer/scala-dlx</a></p>
+</div>
+
+
+  
+  <p class=tags>This entry was tagged
+    
+      <a href="/tags/algorithms/">algorithms</a>
+  
+
+  
+
+      </div>
+    </div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20909083-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-20909083-1', {
+        'anonymize_ip': true,
+        'cookie_expires': 0,
+      });
+    </script>
+  </body>
+</html>

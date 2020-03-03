@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+  
+    <title>(0|1) log</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/_pygments.css" type="text/css">
+  
+  </head>
+  <body>
+    <div class=container>
+      <div class=header>
+        <a href="/about/">(0|1) log</a>
+      </div>
+      <div class=navigation>
+        <ul>
+          <li><a href="/">blog</a>
+          <li><a href="/archive/">archive</a>
+          <li><a href="/tags/">tags</a>
+          <li><a href="/projects/">projects</a>
+          <li><a href="/about/">about</a>
+        </ul>
+      </div>
+      <div class=body>
+        
+  <h1 class="title">pprofile + matplotlib = python program profiled as an awesome heatmap</h1>
+
+  
+  <p class=date>written on Monday, February 6, 2017
+  
+
+  <p>I use python for scripting, a lot. Python gives me the freedom and
+flexibility to whip up a functioning code in the least amount of time
+with least amount of effort. In python even the simplest of things can
+be implemented in many different ways. For example <tt class="docutils literal">a rise to power b</tt>
+can be achieved using:</p>
+<ul class="simple">
+<li>Python power function : <tt class="docutils literal">pow(a, b)</tt></li>
+<li>Python power operator : <tt class="docutils literal">a ** b</tt></li>
+<li>Writing your own kickass modular exponent <tt class="docutils literal">a rise to power b</tt>
+function and using it.</li>
+</ul>
+<p>which leads to questions like:</p>
+<ul class="simple">
+<li>Which of it is the fastest to implement?</li>
+<li>Which of it is the best to use if total execution time is my only
+constraint?</li>
+</ul>
+<p>This may not matter much in a script which we rarely use or even the
+ones we use on a daily basis. But, these questions becomes extremely
+important in case of competitive programs where the difference of a
+second can mean acceptance or time limit exceed.</p>
+<p>Obviously, the way to go about it is profiling. There are some really
+good profilers in python like <a class="reference external" href="https://docs.python.org/2/library/profile.html#module-profile">profile</a>, <a class="reference external" href="https://docs.python.org/2/library/profile.html#module-cProfile">cProfile</a>, <a class="reference external" href="https://github.com/rkern/line_profiler">line_profiler</a>,
+<a class="reference external" href="https://github.com/vpelletier/pprofile">pprofile</a> etc. But profilers print out a ton of data and you have to
+sift through them to figure out hot zones.</p>
+<p>As a famous English idiom goes,</p>
+<blockquote>
+A picture is worth a thousand words</blockquote>
+<p>I felt the need for a quick tool which gives me a bird’s eye view of the
+hot zones in a python code without much effort which led me to create
+<a class="reference external" href="https://github.com/csurfer/pyheat">pyheat</a>. This is a simple command line tool which takes python file as
+an input, profiles it one line at a time and displays the entire program
+as a heat map indicating areas which consumed the most amount of time.</p>
+<div class="section" id="where-to-find-the-code">
+<h2>Where to find the code ?</h2>
+<p><a class="reference external" href="https://github.com/csurfer/pyheat">https://github.com/csurfer/pyheat</a></p>
+</div>
+
+
+  
+  <p class=tags>This entry was tagged
+    
+      <a href="/tags/profiling/">profiling</a> and 
+      <a href="/tags/python/">python</a>
+  
+
+  
+
+      </div>
+    </div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20909083-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-20909083-1', {
+        'anonymize_ip': true,
+        'cookie_expires': 0,
+      });
+    </script>
+  </body>
+</html>

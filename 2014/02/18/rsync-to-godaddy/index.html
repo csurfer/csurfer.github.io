@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+  
+    <title>(0|1) log</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/_pygments.css" type="text/css">
+  
+  </head>
+  <body>
+    <div class=container>
+      <div class=header>
+        <a href="/about/">(0|1) log</a>
+      </div>
+      <div class=navigation>
+        <ul>
+          <li><a href="/">blog</a>
+          <li><a href="/archive/">archive</a>
+          <li><a href="/tags/">tags</a>
+          <li><a href="/projects/">projects</a>
+          <li><a href="/about/">about</a>
+        </ul>
+      </div>
+      <div class=body>
+        
+  <h1 class="title">rsync to godaddy</h1>
+
+  
+  <p class=date>written on Tuesday, February 18, 2014
+  
+
+  <p>There has been a lot of posts online about how to sync your website
+using <a class="reference external" href="http://rsync.samba.org/">rsync</a> if your domain hosting is provided by <a class="reference external" href="http://www.godaddy.com/">GoDaddy.com</a>. The
+main problem with most of them is they are either old and not working,
+or haven’t provided proper source to download the binary from. So here
+is the two bits from my side to help out people who are trying to sync
+their website using rsync.</p>
+<p>Following are the steps I followed :</p>
+<ul class="simple">
+<li>ssh login to your hosting server.</li>
+<li>Create a bin folder in your hosting server with <tt class="docutils literal">mkdir ~/bin</tt>
+command.</li>
+<li>Download a rsync binary which is suitable to you from the
+<a class="reference external" href="http://pkgs.repoforge.org/rsync/">repository</a>. You can extract the binary from <tt class="docutils literal">.rpm</tt> file using
+the command</li>
+</ul>
+<div class="highlight"><pre><span></span>rpm2cpio rsync-3.0.6-4.el5_7.1.i386.rpm <span class="p">|</span> cpio -idmv
+</pre></div>
+<ul class="simple">
+<li>The rsync binary will get extracted into <tt class="docutils literal">./usr/bin</tt> directory.</li>
+<li>This rsync executible needs to be placed into the <tt class="docutils literal">~/bin</tt> directory
+of the hosting server.</li>
+<li>After placing the binary in the hosting server change the permissions
+of the file to <tt class="docutils literal">755</tt> using the command <tt class="docutils literal">chmod 755 rsync</tt>.</li>
+<li>Then you can rsync the files from your pc’s <tt class="docutils literal">~/octopress/public/</tt>
+folder into the hosting server’s public_html folder by using the
+command</li>
+</ul>
+<div class="highlight"><pre><span></span>rsync -rv --rsync-path<span class="o">=</span>~/bin/rsync ~/octopress/public/ username@website:/path/to/public_html
+</pre></div>
+
+
+  
+  <p class=tags>This entry was tagged
+    
+      <a href="/tags/rsync/">rsync</a>
+  
+
+  
+
+      </div>
+    </div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20909083-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-20909083-1', {
+        'anonymize_ip': true,
+        'cookie_expires': 0,
+      });
+    </script>
+  </body>
+</html>
